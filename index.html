@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- site metas -->
+  <title>MERAKI ORGANICS</title>
+  <meta name="description"
+    content="Meraki Organics: Organic skin and hair care products crafted from fine natural ingredients." />
+
+
+  <!-- Open Graph (Facebook, LinkedIn, Slack) -->
+  <meta property="og:title" content="Meraki Organics - Nature Meets Luxury" />
+  <meta property="og:description"
+    content="Discover our handcrafted, organic skin & hair care products made with sustainably sourced botanical ingredients." />
+  <meta property="og:image" content="https://your-site-domain.com/images/og-image.png" />
+  <meta property="og:url" content="https://your-site-domain.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meraki Organics – Nature Meets Luxury" />
+  <meta name="twitter:description"
+    content="Discover our handcrafted, organic skin & hair care products made with sustainably sourced botanical ingredients." />
+  <meta name="twitter:image" content="https://your-site-domain.com/images/og-image.png" />
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="images/fevicon.png" type="image/png" />
+  <!-- fonts & icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo-new.png" alt="Meraki Organics" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- hero banner section -->
+  <div class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12">
+          <div class="hero-content">
+            <h5 class="pre-title">Natural & Organic</h5>
+            <h1 class="hero-title">MERAKI ORGANICS</h1>
+            <p class="hero-text">Where nature meets luxury. Discover handcrafted organic skin and hair care products
+              made with the finest natural ingredients.</p>
+            <div class="hero-buttons">
+              <a href="products.html" class="btn btn-primary">Shop Now</a>
+              <a href="about.html" class="btn btn-outline">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="hero-image">
+            <img src="images/contact.jpg" class="img-fluid" alt="Organic care products">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-leaf hero-leaf-1"><img src="images/seeds.png" class="img-fluid" alt="Organic care products"></div>
+    <!-- <div class="hero-leaf hero-leaf-2"><img src="images/seeds.png" class="img-fluid" alt="Organic care products"></div> -->
+  </div>
+
+  <!-- features section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h4>100% Organic</h4>
+            <p>Natural ingredients</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-ban"></i>
+            </div>
+            <h4>Paraben Free</h4>
+            <p>No harmful chemicals</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h4>Cruelty Free</h4>
+            <p>Never tested on animals</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h4>Eco-Friendly</h4>
+            <p>Sustainable practices</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- product section -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h6 class="sub-title">Our Collection</h6>
+        <h2 class="section-title">Handcrafted Products</h2>
+        <p class="section-desc">Discover our carefully crafted organic essentials for skin and hair</p>
+      </div>
+      <div class="row" id="product-list">
+        <!-- cards injected via JS -->
+      </div>
+      <div class="text-center mt-5">
+        <a href="products.html" class="btn btn-outline-secondary">View All Products</a>
+      </div>
+    </div>
+    <div class="product-leaf"></div>
+  </section>
+
+  <!-- about section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12">
+          <div class="about-image">
+            <img src="images/about-home.jpg" class="img-fluid" alt="Meraki Organics story">
+            <!-- <div class="about-shape"></div> -->
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="about-content">
+            <h6 class="sub-title">About Us</h6>
+            <h2 class="section-title">The Meraki Philosophy</h2>
+            <p>
+              Welcome to Meraki Organics, where nature meets luxury. Our passion for creating effective, organic skin
+              and hair care products has led us to craft artisanal essentials that nourish, rejuvenate, and pamper.
+              Inspired by the natural world, we select only the finest ingredients, blending traditional wisdom with
+              modern innovation.
+            </p>
+            <p>
+              With a commitment to sustainability, cruelty-free practices, and eco-friendly ingredients, we're dedicated
+              to helping you achieve a glowing beauty routine that honors both people and the planet.
+            </p>
+            <div class="key-ingredients">
+              <h5>Key Ingredients</h5>
+              <div class="ingredients-list">
+                <div class="ingredient-item">
+                  <span class="ingredient-icon"><i class="fas fa-seedling"></i></span>
+                  <span class="ingredient-name">Organic Rice</span>
+                </div>
+                <div class="ingredient-item">
+                  <span class="ingredient-icon"><i class="fas fa-leaf"></i></span>
+                  <span class="ingredient-name">Flaxseed</span>
+                </div>
+                <div class="ingredient-item">
+                  <span class="ingredient-icon"><i class="fas fa-mortar-pestle"></i></span>
+                  <span class="ingredient-name">Turmeric</span>
+                </div>
+                <div class="ingredient-item">
+                  <span class="ingredient-icon"><i class="fas fa-tint"></i></span>
+                  <span class="ingredient-name">Plant Oils</span>
+                </div>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-primary mt-4">Read Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h6 class="sub-title">Testimonials</h6>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The Anti-Dandruff Hair Mask has transformed my hair. It's so nourishing and my
+              scalp feels healthier than ever!"</p>
+            <div class="testimonial-author">
+              <h5>Priya S.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"I love that these products are all-natural and still so effective. My skin has
+              never looked better since using Meraki Organics."</p>
+            <div class="testimonial-author">
+              <h5>Rahul M.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The attention to detail and quality ingredients make Meraki products worth
+              every penny. I'm a customer for life!"</p>
+            <div class="testimonial-author">
+              <h5>Ananya K.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Stay updated with new products, special offers, and natural beauty tips.</p>
+          </div>
+          <div class="col-lg-6">
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit">Subscribe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-about">
+            <img src="images/logo-new.png" alt="Meraki Organics" class="footer-logo">
+            <p>Meraki Organics is dedicated to creating organic, sustainable beauty products that celebrate the power of
+              nature.</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="products.html">Skin Care</a></li>
+              <li><a href="products.html">Hair Care</a></li>
+              <li><a href="products.html">Body Care</a></li>
+              <li><a href="products.html">Gift Sets</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 123 Natural Avenue, Organic City</li>
+              <li><i class="fas fa-phone-alt"></i> +91 123 456 7890</li>
+              <li><i class="fas fa-envelope"></i> hello@merakiorganics.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; 2025 Meraki Organics. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-right">
+            <p>Terms & Conditions | Privacy Policy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Fetch products and render cards
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        const list = document.getElementById('product-list');
+        products.slice(0, 4).forEach(p => {
+          const col = document.createElement('div');
+          col.className = 'col-lg-3 col-md-6 col-sm-6 mb-4';
+          col.innerHTML = `
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="${p.img || 'images/placeholder.png'}" alt="${p.name}" class="img-fluid">
+                  <div class="product-overlay">
+                    <a href="products.html#${p.id}" class="btn-quick-view">Quick View</a>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <h4 class="product-title">${p.name}</h4>
+                  <p class="product-tagline">${p.tagline}</p>
+                  <div class="product-price">
+                    <span class="price">Rs ${p.price}</span>
+                  </div>
+                  <a href="products.html#${p.id}" class="btn-add-to-cart">Add to Cart</a>
+                </div>
+              </div>
+            `;
+          list.appendChild(col);
+        });
+      })
+      .catch(err => console.error('Error loading products:', err));
+  </script>
+</body>
+
+</html>

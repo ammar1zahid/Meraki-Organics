@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- site metas -->
+    <title>Products - MERAKI ORGANICS</title>
+    <meta name="description" content="Meraki Organics: Organic skin and hair care products crafted from fine natural ingredients." />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="images/fevicon.png" type="image/png" />
+    <!-- fonts & icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo-new.png" alt="Meraki Organics" class="logo-img">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- page banner -->
+    <div class="page-banner">
+      <div class="container">
+        <h1 class="page-title">Our Products</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Products</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- product section -->
+    <section class="product-section">
+      <div class="container">
+        <!-- filter section -->
+        <div class="filter-section">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="filter-title">Filter by:</h4>
+              <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="skin">Skin Care</button>
+                <button class="filter-btn" data-filter="hair">Hair Care</button>
+                <button class="filter-btn" data-filter="body">Body Care</button>
+                <button class="filter-btn" data-filter="chemical_free">Chemical Free</button>
+                <button class="filter-btn" data-filter="paraben_free">Paraben Free</button>
+                <button class="filter-btn" data-filter="cold_processed">Cold Processed</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- sort section -->
+        <div class="sort-section">
+          <div class="product-count">Showing <span id="products-showing">0</span> of <span id="products-total">0</span> products</div>
+          <div class="sort-dropdown">
+            <button class="sort-btn" id="sort-dropdown-btn">
+              Sort by: <span id="current-sort">Featured</span> <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="sort-dropdown-content" id="sort-dropdown">
+              <div class="sort-option" data-sort="featured">Featured</div>
+              <div class="sort-option" data-sort="price-low">Price: Low to High</div>
+              <div class="sort-option" data-sort="price-high">Price: High to Low</div>
+              <div class="sort-option" data-sort="name-az">Name: A to Z</div>
+              <div class="sort-option" data-sort="name-za">Name: Z to A</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- products grid -->
+        <div class="row" id="product-list">
+          <!-- products will be loaded here via JS -->
+        </div>
+        
+        <!-- no products message -->
+        <div class="no-products" id="no-products" style="display: none;">
+          <i class="fas fa-box-open"></i>
+          <h3>No Products Found</h3>
+          <p>We couldn't find any products matching your criteria.</p>
+          <button class="btn btn-primary" id="reset-filters">Reset Filters</button>
+        </div>
+      </div>
+      <div class="product-leaf"></div>
+    </section>
+    
+    <!-- product quick view modal -->
+    <div class="product-detail-modal" id="product-modal">
+      <div class="modal-content">
+        <span class="close-modal" id="close-modal"><i class="fas fa-times"></i></span>
+        <div class="modal-body">
+          <div class="modal-row" id="modal-content">
+            <!-- Modal content will be loaded here via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-about">
+              <img src="images/logo-new.png" alt="Meraki Organics" class="footer-logo">
+              <p>Meraki Organics is dedicated to creating organic, sustainable beauty products that celebrate the power of nature.</p>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-links">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="products.html?filter=skin">Skin Care</a></li>
+                <li><a href="products.html?filter=hair">Hair Care</a></li>
+                <li><a href="products.html?filter=body">Body Care</a></li>
+                <li><a href="#">Gift Sets</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-contact">
+              <h4>Contact Us</h4>
+              <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Natural Avenue, Organic City</li>
+                <li><i class="fas fa-phone-alt"></i> +91 123 456 7890</li>
+                <li><i class="fas fa-envelope"></i> hello@merakiorganics.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; 2025 Meraki Organics. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-right">
+              <p>Terms & Conditions | Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Global variables
+      let allProducts = [];
+      let filteredProducts = [];
+      let currentFilter = 'all';
+      let currentSort = 'featured';
+      
+      // DOM elements
+      const productList = document.getElementById('product-list');
+      const productModal = document.getElementById('product-modal');
+      const closeModal = document.getElementById('close-modal');
+      const modalContent = document.getElementById('modal-content');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const sortOptions = document.querySelectorAll('.sort-option');
+      const sortDropdownBtn = document.getElementById('sort-dropdown-btn');
+      const sortDropdown = document.getElementById('sort-dropdown');
+      const currentSortText = document.getElementById('current-sort');
+      const productsShowing = document.getElementById('products-showing');
+      const productsTotal = document.getElementById('products-total');
+      const noProductsMessage = document.getElementById('no-products');
+      const resetFiltersBtn = document.getElementById('reset-filters');
+      
+      // Fetch products on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        fetch('products.json')
+          .then(res => res.json())
+          .then(products => {
+            allProducts = products;
+            filteredProducts = [...products];
+            
+            // Set product counts
+            productsTotal.textContent = allProducts.length;
+            productsShowing.textContent = filteredProducts.length;
+            
+            // Check for hash in URL (for direct product viewing)
+            checkUrlHash();
+            
+            // Render all products initially
+            renderProducts(filteredProducts);
+          })
+          .catch(err => {
+            console.error('Error loading products:', err);
+            productList.innerHTML = `
+              <div class="col-12">
+                <div class="alert alert-danger">
+                  Error loading products. Please try again later.
+                </div>
+              </div>
+            `;
+          });
+      });
+      
+      // Check URL hash for direct product view
+      function checkUrlHash() {
+        if(window.location.hash) {
+          const productId = parseInt(window.location.hash.substring(1));
+          const product = allProducts.find(p => p.id === productId);
+          if(product) {
+            showProductModal(product);
+          }
+        }
+      }
+      
+      // Listen for hash changes
+      window.addEventListener('hashchange', checkUrlHash);
+      
+      // Render products to the grid
+      function renderProducts(products) {
+        if(products.length === 0) {
+          productList.innerHTML = '';
+          noProductsMessage.style.display = 'block';
+          return;
+        }
+        
+        noProductsMessage.style.display = 'none';
+        productList.innerHTML = '';
+        
+        products.forEach(product => {
+          const col = document.createElement('div');
+          col.className = 'col-lg-3 col-md-6 col-sm-6 mb-4';
+          col.innerHTML = `
+            <div class="product-card">
+              <div class="product-image">
+                <img src="${product.img || 'images/placeholder.png'}" alt="${product.name}" class="img-fluid">
+                <div class="product-overlay">
+                  <a href="#${product.id}" class="btn-quick-view">Quick View</a>
+                </div>
+              </div>
+              <div class="product-info">
+                <h4 class="product-title">${product.name}</h4>
+                <p class="product-tagline">${product.tagline}</p>
+                <div class="product-price">
+                  <span class="price">Rs ${product.price}</span>
+                </div>
+              </div>
+            </div>
+          `;
+          productList.appendChild(col);
+        });
+        
+        // Update showing count
+        productsShowing.textContent = products.length;
+      }
+      
+      // Show product modal
+      function showProductModal(product) {
+        // Create ingredients tags HTML
+        let ingredientsTags = '';
+        if(product.star_ingredients && product.star_ingredients.length > 0) {
+          product.star_ingredients.forEach(ingredient => {
+            ingredientsTags += `<span class="ingredient-tag">${ingredient}</span>`;
+          });
+        }
+        
+        // Create highlights badges HTML
+        let highlightsBadges = '';
+        if(product.chemical_free) {
+          highlightsBadges += `
+            <span class="highlight-badge">
+              <i class="fas fa-check-circle"></i> Chemical Free
+            </span>
+          `;
+        }
+        if(product.paraben_free) {
+          highlightsBadges += `
+            <span class="highlight-badge">
+              <i class="fas fa-check-circle"></i> Paraben Free
+            </span>
+          `;
+        }
+        if(product.cold_processed) {
+          highlightsBadges += `
+            <span class="highlight-badge">
+              <i class="fas fa-check-circle"></i> Cold Processed
+            </span>
+          `;
+        }
+        
+        // Set modal content
+        modalContent.innerHTML = `
+          <div class="modal-image">
+            <img src="${product.img || 'images/placeholder.png'}" alt="${product.name}">
+          </div>
+          <div class="modal-info">
+            <h3 class="modal-product-title">${product.name}</h3>
+            <p class="modal-product-tagline">${product.tagline}</p>
+            <div class="modal-product-price">Rs ${product.price}</div>
+            <div class="modal-product-highlights">
+              ${highlightsBadges}
+              <span class="highlight-badge">
+                <i class="fas fa-flask"></i> pH ${product.ph_level || 'N/A'}
+              </span>
+            </div>
+            <div class="modal-product-description">
+              <p>${product.description || 'No description available.'}</p>
+            </div>
+            <div class="star-ingredients">
+              <h5>Star Ingredients</h5>
+              <div class="ingredients-tags">
+                ${ingredientsTags || '<span>No ingredients information available.</span>'}
+              </div>
+            </div>
+            <div class="modal-product-directions">
+              <h5>How to Use</h5>
+              <p>${product.directions || 'No directions available.'}</p>
+            </div>
+          </div>
+        `;
+
+        
+        // Show modal
+        productModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+      
+      // Close product modal
+      closeModal.addEventListener('click', () => {
+        productModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        // Remove hash from URL to prevent reopening on refresh
+        if(window.location.hash) {
+          history.pushState("", document.title, window.location.pathname + window.location.search);
+        }
+      });
+      
+      // Filter products
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          // Get filter value
+          currentFilter = button.getAttribute('data-filter');
+          
+          // Filter products
+          if(currentFilter === 'all') {
+            filteredProducts = [...allProducts];
+          } else if(['skin', 'hair', 'body'].includes(currentFilter)) {
+            // This is a category filter - assuming products have categories
+            // You'll need to add category properties to your products or infer from name/description
+            filteredProducts = allProducts.filter(product => {
+              const name = product.name.toLowerCase();
+              if(currentFilter === 'skin') return name.includes('skin') || name.includes('face') || name.includes('cream');
+              if(currentFilter === 'hair') return name.includes('hair') || name.includes('shampoo') || name.includes('conditioner');
+              if(currentFilter === 'body') return name.includes('body') || name.includes('bath') || name.includes('soap');
+              return false;
+            });
+          } else {
+            // This is a property filter
+            filteredProducts = allProducts.filter(product => product[currentFilter] === true);
+          }
+          
+          // Sort and render products
+          sortProducts();
+        });
+      });
+      
+           // Sort products
+      function sortProducts() {
+        switch(currentSort) {
+          case 'price-low':
+            filteredProducts.sort((a, b) => a.price - b.price);
+            break;
+          case 'price-high':
+            filteredProducts.sort((a, b) => b.price - a.price);
+            break;
+          case 'name-az':
+            filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+            break;
+          case 'name-za':
+            filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
+            break;
+          // 'featured' or default: original order
+          default:
+            filteredProducts = filteredProducts.slice();
+        }
+        // Update sort label
+        currentSortText.textContent = sortOptions[
+          Array.from(sortOptions).findIndex(opt => opt.dataset.sort === currentSort)
+        ]?.textContent || 'Featured';
+        renderProducts(filteredProducts);
+      }
+
+      // Toggle sort dropdown
+      sortDropdownBtn.addEventListener('click', () => {
+        sortDropdown.classList.toggle('show');
+      });
+
+      // Handle sort option selection
+      sortOptions.forEach(option => {
+        option.addEventListener('click', () => {
+          currentSort = option.getAttribute('data-sort');
+          sortDropdown.classList.remove('show');
+          sortProducts();
+        });
+      });
+
+      // Close dropdown on outside click
+      document.addEventListener('click', (e) => {
+        if (!sortDropdown.contains(e.target) && !sortDropdownBtn.contains(e.target)) {
+          sortDropdown.classList.remove('show');
+        }
+      });
+
+      // Quick view (delegate)
+      productList.addEventListener('click', e => {
+        const quick = e.target.closest('.btn-quick-view');
+        if (quick) {
+          e.preventDefault();
+          const id = parseInt(quick.getAttribute('href').substring(1));
+          const product = allProducts.find(p => p.id === id);
+          if (product) showProductModal(product);
+        }
+      });
+
+      // Close modal when clicking outside content
+      productModal.addEventListener('click', e => {
+        if (e.target === productModal) {
+          closeModal.click();
+        }
+      });
+
+      // Reset filters
+      resetFiltersBtn.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        filterButtons[0].classList.add('active');
+        currentFilter = 'all';
+        filteredProducts = [...allProducts];
+        sortProducts();
+      });
+    </script>
