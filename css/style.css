@@ -226,7 +226,7 @@ img {
 
 .nav-link {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 800;
   color: var(--text-color);
   padding: 10px 0;
   position: relative;
@@ -377,11 +377,11 @@ img {
   right: 0;
   width: 40%;
   height: 100%;
-  background: linear-gradient(to right,
+  /* background: linear-gradient(to right,
   rgba(120, 168, 144, 0.4), 
     rgba(120, 168, 144, 0.6)), 
-    url('../images/background.jpg');
-  /* background: url('../images/background.jpg'); */
+    url('../images/background.jpg'); */
+  background: url('../images/background.jpg');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -939,7 +939,7 @@ img {
 }
 
  /* Global Resources Section */
-        .global-resources-section {
+        /* .global-resources-section {
             padding: 100px 0;
             background: linear-gradient(135deg, 
                 rgba(248, 247, 243, 0.9) 0%, 
@@ -1084,8 +1084,334 @@ img {
             bottom: 20%;
             left: 20%;
             animation-delay: 4s;
-        }
+        } */
 
+        /* Enhanced Global Resources Section - More Prominent Animation */
+.global-resources-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, 
+        rgba(248, 247, 243, 0.85) 0%, 
+        rgba(255, 255, 255, 0.85) 100%), 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="4" height="4"><circle cx="2" cy="2" r="0.5" fill="%23385c42" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    position: relative;
+    overflow: hidden;
+}
+
+/* Much More Prominent Floating Background */
+.global-resources-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        /* Primary rotating gradient - much more visible */
+        conic-gradient(from 0deg at 50% 50%, 
+            rgba(74, 124, 89, 0.4) 0%, 
+            rgba(120, 168, 144, 0.35) 25%, 
+            rgba(241, 200, 140, 0.3) 50%, 
+            rgba(215, 180, 153, 0.35) 75%,
+            rgba(74, 124, 89, 0.4) 100%
+        ),
+        /* Multiple radial gradients for depth */
+        radial-gradient(circle at 25% 25%, rgba(74, 124, 89, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 75% 75%, rgba(120, 168, 144, 0.25) 10%, transparent 65%),
+        radial-gradient(circle at 80% 20%, rgba(241, 200, 140, 0.2) 5%, transparent 55%),
+        radial-gradient(circle at 20% 80%, rgba(215, 180, 153, 0.25) 0%, transparent 70%);
+    animation: prominentRotate 20s linear infinite;
+    z-index: 1;
+    filter: blur(1px); /* Slight blur for dreamy effect */
+}
+
+/* Additional layer for even more visibility */
+.global-resources-section::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -40%;
+    width: 180%;
+    height: 180%;
+    background: 
+        radial-gradient(ellipse 60% 40% at 30% 70%, rgba(74, 124, 89, 0.25) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 70% 30%, rgba(120, 168, 144, 0.2) 0%, transparent 65%),
+        linear-gradient(45deg, 
+            rgba(241, 200, 140, 0.15) 0%, 
+            transparent 40%, 
+            rgba(215, 180, 153, 0.12) 60%, 
+            transparent 100%
+        );
+    animation: prominentRotate 30s linear infinite reverse;
+    z-index: 1;
+}
+
+/* More prominent rotation animation */
+@keyframes prominentRotate {
+    0% { 
+        transform: rotate(0deg) scale(1); 
+        opacity: 0.9;
+    }
+    25% { 
+        transform: rotate(90deg) scale(1.2); 
+        opacity: 1;
+    }
+    50% { 
+        transform: rotate(180deg) scale(0.8); 
+        opacity: 0.95;
+    }
+    75% { 
+        transform: rotate(270deg) scale(1.1); 
+        opacity: 1;
+    }
+    100% { 
+        transform: rotate(360deg) scale(1); 
+        opacity: 0.9;
+    }
+}
+
+.global-resources-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.global-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.global-text-content {
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.global-text-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-light));
+    border-radius: 20px 20px 0 0;
+}
+
+.global-image-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.global-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 400px;
+}
+
+.global-image-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    background: linear-gradient(45deg, var(--primary-light), var(--secondary-color));
+}
+
+.global-image-item:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.global-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.global-image-item:hover img {
+    transform: scale(1.1);
+}
+
+.global-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.global-image-item:hover .global-image-overlay {
+    transform: translateY(0);
+}
+
+/* Much More Prominent Floating Elements */
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-element {
+    position: absolute;
+    opacity: 0.6; /* Much more visible - increased from 0.1 */
+    animation: prominentFloat 10s ease-in-out infinite;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 4px 8px rgba(74, 124, 89, 0.3));
+}
+
+/* Individual positioning and styling for each floating element */
+.floating-leaf {
+    /* top: 2%; */
+    top: 2%;
+    right: 2%;
+    animation-delay: 0s;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.floating-seedling {
+    top: -45%;
+    right: 5%;
+    animation-delay: 2s;
+    color: var(--secondary-color);
+    font-size: 2.8rem;
+}
+
+.floating-spa {
+    bottom: 85%;
+    left: 15%;
+    animation-delay: 4s;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.floating-flower {
+    top: 1%;
+    right: -22%;
+    animation-delay: 0s;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.floating-mortar-pestle {
+    top: -45%;
+    left: 5%;
+    animation-delay: 8s;
+    color: var(--primary-dark);
+    font-size: 2.6rem;
+}
+
+/* Much more prominent floating animation */
+@keyframes prominentFloat {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) rotate(0deg) scale(1); 
+        opacity: 0.4;
+    }
+    20% { 
+        transform: translateY(-25px) translateX(15px) rotate(8deg) scale(1.2); 
+        opacity: 0.8;
+    }
+    40% { 
+        transform: translateY(-40px) translateX(-10px) rotate(-5deg) scale(0.9); 
+        opacity: 0.6;
+    }
+    60% { 
+        transform: translateY(-30px) translateX(-20px) rotate(12deg) scale(1.1); 
+        opacity: 0.9;
+    }
+    80% { 
+        transform: translateY(-15px) translateX(5px) rotate(-8deg) scale(1.05); 
+        opacity: 0.7;
+    }
+}
+
+/* Add pulsing effect for extra visibility */
+.floating-element:nth-child(odd) {
+    animation: prominentFloat 20s ease-in-out infinite, 
+               subtlePulse 3s ease-in-out infinite;
+}
+
+.floating-element:nth-child(even) {
+    animation: prominentFloat 22s ease-in-out infinite, 
+               subtlePulse 4s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+    0%, 100% { 
+        filter: drop-shadow(0 4px 8px rgba(74, 124, 89, 0.3));
+    }
+    50% { 
+        filter: drop-shadow(0 6px 15px rgba(74, 124, 89, 0.5));
+    }
+}
+
+/* Remove placeholder styling since we're using real images */
+.placeholder-img {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .global-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .global-image-grid {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .floating-element {
+        font-size: 2rem;
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 768px) {
+    .global-resources-section {
+        padding: 60px 0;
+    }
+    
+    .global-text-content {
+        padding: 30px;
+    }
+    
+    .floating-element {
+        font-size: 1.8rem;
+        opacity: 0.3;
+    }
+    
+    /* Reduce animation intensity on mobile */
+    .global-resources-section::before,
+    .global-resources-section::after {
+        animation-duration: 40s;
+        opacity: 0.7;
+    }
+}
         /* Cold Process & Melt-Pour Section */
         .soaps-info-section {
             padding: 100px 0;

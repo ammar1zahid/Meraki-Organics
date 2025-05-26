@@ -6,8 +6,8 @@
       } */
 
         .page-banner {
-        background: linear-gradient( rgba(120, 168, 144, 0.4), rgba(120, 168, 144, 0.6)), url('../images/background.jpg');
-        /* background:  url('../images/background.jpg'); */
+        /* background: linear-gradient( rgba(120, 168, 144, 0.4), rgba(120, 168, 144, 0.6)), url('../images/background.jpg'); */
+        background:  url('../images/background.jpg');
         background-size: cover;
         background-position: center;
         padding: 150px 0 80px;

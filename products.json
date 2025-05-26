@@ -51,7 +51,7 @@
   },
   {
     "id": 3,
-    "name": "Anti Ageing Face & Body Soap Bar",
+    "name": "Age Refining Face & Body Soap Bar",
     "tagline": "Rejuvenate your skin, refresh your soul.",
     "ph_level": 6,
     "chemical_free": true,
@@ -68,14 +68,14 @@
       "coconut oil",
       "alum"
     ],
-    "description": "Our cold-process anti-ageing soap bar combines powerful natural ingredients: flaxseed for hydration & anti-inflammatory effects; fermented rice cream as a natural skin lightener and exfoliant; lavender for its antiseptic, calming properties; alum to tighten pores and brighten complexion; olive oil to restore the skin barrier; shea butter and coconut oil for nourishment; potato starch for brightening; and goat milk rich in vitamins A, B, B6, B12 and minerals to support collagen and reduce oxidative stress.",
+    "description": "Our cold-process age refining soap bar combines powerful natural ingredients: flaxseed for hydration & anti-inflammatory effects; fermented rice cream as a natural skin lightener and exfoliant; lavender for its antiseptic, calming properties; alum to tighten pores and brighten complexion; olive oil to restore the skin barrier; shea butter and coconut oil for nourishment; potato starch for brightening; and goat milk rich in vitamins A, B, B6, B12 and minerals to support collagen and reduce oxidative stress.",
     "note": "Always apply sunscreen before stepping out to protect from heat and sun damage.",
     "price": 699,
      "img":"images/logo-new.png"
   },
   {
     "id": 4,
-    "name": "Anti-Ageing Face Wash",
+    "name": "Age Refining Face Wash",
     "tagline": "Look flawless & pamper your skin with pure bliss.",
     "ph_level": 6,
     "chemical_free": true,
@@ -92,7 +92,7 @@
       "alum",
       "floral hydrosol"
     ],
-    "directions": "Apply on damp skin, massage for 30 seconds, then rinse. For best results, follow with Glass Glow Anti-Ageing Serum.",
+    "directions": "Apply on damp skin, massage for 30 seconds, then rinse. For best results, follow with Glass Glow Age Refining Serum.",
     "description": "Our cold-process liquid face wash harnesses the anti-inflammatory and hydrating power of flaxseed; rice cream as a skin lightener and exfoliant; lavender’s antiseptic, anti-inflammatory benefits; alum to tighten and brighten pores; olive oil to restore the skin barrier; shea butter for nourishment; and potato starch for brightening. Goat milk’s vitamins and minerals support collagen and reduce oxidative stress.",
     "note": "Always apply sunscreen before stepping out to protect from heat and sun damage.",
     "price": 700,
@@ -122,7 +122,7 @@
   },
   {
     "id": 6,
-    "name": "Kiddy Soap Bar",
+    "name": "Kids Soap Bar",
     "tagline": "Pure lather, happy tears. Organic soaps for little ones.",
     "ph_level": 5.5,
     "chemical_free": true,
@@ -188,7 +188,7 @@
   },
   {
     "id": 9,
-    "name": "Glow Me Good Anti Ageing Face Serum with 1% Hyaluronic Acid",
+    "name": "Glow Me Good Age Refining Face Serum with 1% Hyaluronic Acid",
     "tagline": "Wrinkles are overrated, just skin care and chill.",
     "ph_level": 5,
     "chemical_free": false,
