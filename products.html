@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/products.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="icon" href="images/logo-new.png" type="image/png" />
+    <link rel="icon" href="images/fevicon.ico" />
     <!-- fonts & icons -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -237,6 +237,15 @@
       const productsTotal = document.getElementById('products-total');
       const noProductsMessage = document.getElementById('no-products');
       const resetFiltersBtn = document.getElementById('reset-filters');
+
+      // Sticky Header
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          $('.header_section').addClass('sticky');
+        } else {
+          $('.header_section').removeClass('sticky');
+        }
+      });
       
       // Fetch products on page load
       window.addEventListener('DOMContentLoaded', () => {
@@ -382,6 +391,11 @@
               <h5>How to Use</h5>
               <p>${product.directions || 'No directions available.'}</p>
             </div>
+            <div class="modal-actions" style="margin-top: 30px;">
+              <button class="btn btn-primary btn-contact" onclick="contactForProduct('${product.name}')">
+              <i class="fas fa-envelope"></i> Contact for Order
+              </button>
+            </div>
           </div>
         `;
 
@@ -389,6 +403,13 @@
         // Show modal
         productModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
+      }
+
+       // Contact for product function
+      function contactForProduct(productName) {
+        const message = `Hi! I'm interested in ordering ${productName}. Could you please provide more details?`;
+        const whatsappUrl = `https://wa.me/923700433360?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
       }
       
       // Close product modal
